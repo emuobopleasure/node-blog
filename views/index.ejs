@@ -5,6 +5,7 @@
     <%- include('./partials/nav.ejs') %>
     <div class="blogs content">
         <h2>All Blogs</h2>
+        <div class="blogs-container">
         <% if (blogs.length > 1) { %>
             <% blogs.map((blog) => { %>
                 <a class="single" href="/blogs/<%= blog._id %>">
@@ -13,6 +14,7 @@
                 </a>
            <% }) %>
         <% } %>
+        </div>
     </div>
     <%- include('./partials/footer.ejs') %>
 </body>
