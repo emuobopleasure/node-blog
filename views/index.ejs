@@ -3,7 +3,8 @@
 <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/nav.ejs') %>
-    <div class="blogs content">
+    <%- include('./partials/hero.ejs') %>
+    <section class="blogs content">
         <h2>All Blogs</h2>
         <div class="blogs-container">
         <% if (blogs.length > 1) { %>
@@ -15,7 +16,7 @@
            <% }) %>
         <% } %>
         </div>
-    </div>
+    </section>
     <%- include('./partials/footer.ejs') %>
 </body>
 </html>

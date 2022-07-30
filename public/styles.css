@@ -10,7 +10,6 @@
       margin: 20px auto;
       padding: 0 20px;
       font-family: 'Noto Serif', serif;
-      max-width: 1200px;
     }
     h1, h2, h3, a, ul{
       margin: 0;
@@ -24,13 +23,20 @@
     }
 
     /* nav & footer styles */
-    nav{
+    
+    .site-title {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .nav-links{
       display: flex;
       justify-content: space-between;
-      margin-bottom: 60px;
+      /* margin-bottom: 60px; */
       padding-bottom: 10px;
       border-bottom: 1px solid #ddd;
       text-transform: uppercase;
+      align-items: center;
     }
     nav ul{
       display: flex;
@@ -63,11 +69,88 @@
       color: #fffbfc;
     }
 
+    .new-icon {
+      display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .new-icon {
+        display: inline-flex;
+        font-size: 1.5rem;
+        margin-right: -1rem;
+      }
+
+      .new-icon:hover {
+        border-radius: 3px;
+        box-shadow: 2px 3px 4px #777;
+        transition-duration: 300ms;
+        transition-delay: 150ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1.1);
+        transform: translateY(0.25rem);
+      }
+
+      .new-blog {
+        display: none;
+      }
+    }
+
+    .hero-wrapper {
+      background-image: url('./images/background2.jpg');
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: grayscale(80%);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .hero-wrapper h1 {
+      /* display: flex;
+      justify-content: end;
+      padding: 11rem 4rem; */
+      position: absolute;
+      right: 3rem;
+      top: 40%;
+      
+    }
+
+    @media only screen and (max-width: 600px) {
+      .hero-wrapper {
+        height: 200px;
+      }
+
+      .hero-wrapper h1 {
+        /* font-size: inherit;
+        width: 13rem;
+        display: inline-grid;
+         margin: 4rem 6rem; */
+         font-size: inherit;
+         right: 2rem;
+         top: 40%;
+         width: 60%;
+         text-align: end;
+
+      }
+    }    
+
+    @media only screen and (max-width: 884px) {
+      .hero-wrapper h1 {
+        position: absolute;
+        right: 3rem;
+        top: 40%;
+        width: 68%;
+        text-align: end;
+
+      }
+    }
+
     footer{
       /* position: fixed; */
       color: #777;
       text-align: center;
-      margin: 8rem auto 20px;
+      margin: 8rem auto 0 auto;
     }
     h2{
       margin-bottom: 40px;
@@ -78,6 +161,12 @@
     }
     .content{
       margin-left: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .content{
+        margin: 0;
+      }
     }
 
     /* index styles */
@@ -93,7 +182,7 @@
     .blogs a:hover {
       border-left: 6px solid transparent;
       border-radius: 1rem;
-      box-shadow: 5px 10px #6b7074;
+      box-shadow: 5px 10px rgba(99, 100 ,103, 0.6);
     }
     /* .blogs a:hover h3{ */
       /* color: crimson; */
@@ -160,7 +249,7 @@
       border: 0;
       font-size: 1.2em;
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 2px;
     }
 
     .create-blog button:hover{
